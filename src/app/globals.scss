@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  ::-webkit-scrollbar {
+    width: 15px; 
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #1c1c57 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa; 
+    border-radius: 6px;
+  }
+
+
+}
+
+
+
+.changePageIcon {
+
+  @apply text-8xl text-7xl -mb-1 cursor-pointer;
+}
+
+.changePageSpan:has(+ .changePageIcon:hover),
+.changePageIcon:hover + .changePageSpan {
+
+  @apply opacity-100;
+}
+
+.changePageSpan {
+  
+  @apply -mx-5 transition-all duration-500 ease-in-out transform opacity-0;
+}
+
+.navLi {
+
+  @apply relative h-16 cursor-pointer text-gray text-lg border-t-[1px] border-blueDarkOpacity3 capitalize hover:italic;
+
+  > .navDivFadeDown {
+    @apply h-0;
+  }
+
+  > .navDivFadeUp  {
+    @apply h-0 relative top-full ;
+  }
+
+  &:hover {
+    @apply transition-all duration-500;
+
+    .navDivFadeDown,
+    .navDivFadeUp {
+      @apply bg-blueDarkOpacity4 w-full h-1/2 transition-all duration-1000;
+    }
+
+    .navDivFadeUp {
+      @apply top-0 ;
+    }
+  }
+}
+
+.listProjectsItem:hover {
+
+  > .listProjectsSecondaryImg {
+
+    > .img {
+      @apply transition-all duration-500 h-72;
+
+    }
+
+    > .div {
+ 
+      @apply  transition-opacity duration-500 opacity-100;
+
+      > .ul {
+        @apply pt-6 space-x-4 w-full flex-wrap flex justify-center items-center ;
+
+        .li {
+          @apply  mt-4;
+        }
+      }
+    }
+
+  }
+}
+
+.btnLinkProject {
+  background-color: #2250b4;
+  box-shadow: 0 3px 4px -1px rgba(255,255,255, 0.4);
+  @apply text-center h-10 px-4 rounded;
+
+  &:hover {
+    @apply font-bold 
+  }
+
+  &:active {
+    @apply shadow-none transition-all translate-y-[2px] duration-150 
+  }
+}
+
+.typeSkill:hover {
+  @apply italic;
+
+  + .divSkill {
+    @apply transition-opacity duration-1000 opacity-100 h-16 px-6;
+  }
+}
+
+.divSkill:hover {
+  @apply transition-opacity duration-1000 opacity-100 h-16 px-6;
+}
+
+.divRenderHtml {
+  @apply text-base;
+  
+  & h1 {
+    @apply text-4xl font-bold mb-5;
+  }
+
+  & h2 {
+    @apply text-xl font-bold mb-3;
+  }
+
+  & ul, ol {
+    @apply list-disc mb-5;
+
+    & li {
+      @apply ml-10;
+    }
+  }
+
+  & img {
+    @apply max-w-lg max-h-96 w-full h-full object-cover mb-6 block mx-auto;
+  }
+
+  & a {
+    @apply text-white font-bold;
+
+    &:hover {
+      @apply underline italic;
+    }
+  }
+
+  & p {
+    @apply mb-4;
+  }
+}

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,11 +9,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      colors: {
+        'blueLigth': '#3B0CF6',
+        'blueDark': '#151423',
+        'blueDarkOpacity3': '#202038',
+        'blueDarkOpacity4': '#212136',
+        'blueDarkOpacity5': '#1a1a33',
+        'gray': '#aaaaaa',
+        "shadow": "rgba(0, 0, 0, 0.9)",
+      }
     },
   },
   plugins: [],
