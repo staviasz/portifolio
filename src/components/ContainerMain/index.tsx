@@ -6,15 +6,17 @@ export default function ContainerMain() {
   return (
     <>
       <Head subTitle="Portifolio" />
-      <main className="w-full h-screen bg-blueDark text-gray pt-20">
+      <main className="w-full min-h-screen bg-blueDark text-gray py-20">
         <ChangePage changePage="prev" link="/">
           Home
         </ChangePage>
         <ChangePage changePage="next" link="/about">
           Sobre mim
         </ChangePage>
-        <div className="lg:max-w-5xl mx-auto max-w-xl">
-          <h1 className="text-4xl font-bold mb-5">Developer portifolio</h1>
+        <div className="lg:max-w-5xl sm:max-w-xl max-w-64 mx-auto ">
+          <h1 className="sm:text-4xl text-2xl font-bold mb-5">
+            Developer portifolio
+          </h1>
           <p className="mb-14">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
             doloremque inventore ab quos quibusdam fugit quisquam sit deserunt

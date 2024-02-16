@@ -29,7 +29,7 @@
 
 .changePageIcon {
 
-  @apply text-8xl text-7xl -mb-1 cursor-pointer;
+  @apply  sm:text-7xl text-5xl -mb-1 cursor-pointer;
 }
 
 .changePageSpan:has(+ .changePageIcon:hover),
@@ -40,7 +40,7 @@
 
 .changePageSpan {
   
-  @apply -mx-5 transition-all duration-500 ease-in-out transform opacity-0;
+  @apply -mx-5 transition-all duration-500 ease-in-out transform opacity-0 sm:inline-block hidden;
 }
 
 .navLi {
@@ -97,7 +97,7 @@
 .btnLinkProject {
   background-color: #2250b4;
   box-shadow: 0 3px 4px -1px rgba(255,255,255, 0.4);
-  @apply text-center h-10 px-4 rounded;
+  @apply text-center h-10 px-4 ;
 
   &:hover {
     @apply font-bold 
@@ -124,11 +124,11 @@
   @apply text-base;
   
   & h1 {
-    @apply text-4xl font-bold mb-5;
+    @apply sm:text-4xl text-2xl font-bold mb-5;
   }
 
   & h2 {
-    @apply text-xl font-bold mb-3;
+    @apply sm:text-xl text-lg max-w-lg font-bold mb-3;
   }
 
   & ul, ol {

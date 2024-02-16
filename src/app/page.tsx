@@ -7,9 +7,11 @@ export default function Home() {
     <>
       <main className="px-20 flex relative items-center justify-center h-screen bg-black text-blueLigth font-bold max-h-screen overflow-hidden">
         <div className="">
-          <h1 className="text-8xl max-w-sm">Hello I am Erick</h1>
+          <h1 className="sm:text-8xl sm:max-w-sm max-w-36 text-5xl">
+            Hello I am Erick
+          </h1>
         </div>
-        <div className="w-1/2 relative">
+        <div className="w-1/2 relative sm:block hidden">
           <Image
             src={profile}
             alt="foto de Erick Staviasz"

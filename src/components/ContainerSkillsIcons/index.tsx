@@ -1,65 +1,65 @@
 export default function ContainerSkillsIcons() {
   return (
-    <div className="px-10 flex-wrap flex justify-center space-x-4 containerSkill">
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+    <div className="sm:px-10 pr-4 flex-wrap flex justify-center space-x-4 containerSkill">
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
-      <div className="mt-4 w-20 h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
-        <i className="devicon-threedsmax-plain text-2xl"></i>
-        <span className="text-xs">threedsmax</span>
+      <div className="mt-4 sm:w-20 sm:h-14 p-4 shadow-inner shadow-white rounded flex flex-col justify-center items-center">
+        <i className="devicon-threedsmax-plain sm:text-2xl text-4xl"></i>
+        <span className="text-xs sm:inline-block hidden">threedsmax</span>
       </div>
     </div>
   );

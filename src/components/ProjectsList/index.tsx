@@ -6,7 +6,7 @@ import HeaderProjectImg from "../headerProjectImg";
 export default function ProjectList() {
   const tags = ["nextjs", "typescript", "tailwindcss", "react"];
   return (
-    <ul className="w-full grid grid-cols-2 lg:gap-24 gap-10">
+    <ul className="w-full sm:grid grid-cols-2 lg:gap-24 gap-10 space-y-6">
       <li className="relative listProjectsItem cursor-pointer">
         <HeaderProjectImg />
         <Image

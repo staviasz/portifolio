@@ -18,7 +18,7 @@ export default function ImageCarousel({ images }: IImageCarrousel) {
         {images.map(image => (
           <SwiperSlide key={image}>
             <HeaderProjectImg />
-            <Image src={image} alt="Imagem 1" />
+            <Image src={image} alt="Imagem 1" className="sm:h-auto h-40" />
           </SwiperSlide>
         ))}
       </Swiper>

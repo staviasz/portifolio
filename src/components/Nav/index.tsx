@@ -7,8 +7,8 @@ interface IList {
 
 export default function Nav({ listNav, setIsOpen }: IList) {
   return (
-    <nav className="w-full h-full bg-blueDark flex items-center justify-center">
-      <ul className="max-w-[600px] w-full bg-blueDarkOpacity5 text-center max-h-[600px]  border-[1px] border-blueDarkOpacity3 border-t-0">
+    <nav className="w-full h-full bg-blueDark flex items-center justify-center px-6">
+      <ul className=" max-w-[600px] w-full bg-blueDarkOpacity5 text-center max-h-[600px]  border-[1px] border-blueDarkOpacity3 border-t-0">
         {listNav.map(item => (
           <Link key={item} href={`/${item}`}>
             <li className="navLi" onClick={() => setIsOpen(false)}>
