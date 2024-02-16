@@ -9,7 +9,7 @@ interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function ChangePage(props: IButton) {
   const color = !props.textColorBody ? "" : "text-gray";
-  const position = props.changePage === "next" ? "right-0" : "left-0";
+  const position = props.changePage === "next" ? "right-0" : "-left-10";
   return (
     <button className={`fixed top-1/2 z-20 ${position}`}>
       <Link

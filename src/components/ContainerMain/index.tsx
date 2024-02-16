@@ -13,7 +13,7 @@ export default function ContainerMain() {
         <ChangePage changePage="next" link="/about">
           Sobre mim
         </ChangePage>
-        <div className="max-w-5xl mx-auto">
+        <div className="lg:max-w-5xl mx-auto max-w-xl">
           <h1 className="text-4xl font-bold mb-5">Developer portifolio</h1>
           <p className="mb-14">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,

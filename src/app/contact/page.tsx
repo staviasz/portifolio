@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       <main className="w-full min-h-screen bg-blueDark mx-auto py-20">
-        <div className="max-w-4xl mx-auto">
+        <div className="lg:max-w-4xl max-w-xl mx-auto">
           <h1 className="text-4xl font-bold mb-5">Contato</h1>
           <p className="mb-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
@@ -13,7 +13,7 @@ export default function Contact() {
             Quam, quas, architecto facilis laborum suscipit ipsum, ex sequi
             tempore provident dolorum repudiandae!
           </p>
-          <form className="flex flex-col space-y-6 max-w-xl">
+          <form className="flex flex-col space-y-6 max-w-xl ">
             <Input placeholder="Nome" type="text" />
             <Input placeholder="Email" type="email" />
             <Textarea

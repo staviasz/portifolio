@@ -155,3 +155,9 @@
     @apply mb-4;
   }
 }
+
+.containerSkill {
+  > :first-child {
+    margin-left: 16px
+  }
+}

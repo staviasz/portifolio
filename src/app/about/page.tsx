@@ -20,8 +20,8 @@ export default function About() {
           />
           <div className="absolute top-0 w-full h-full z-10 bg-shadow"></div>
         </div>
-        <div className="absolute top-80 w-full h-full z-10 ">
-          <div className="max-w-3xl mx-auto space-y-4">
+        <div className="absolute top-80 w-full h-full z-10">
+          <div className="lg:max-w-3xl mx-auto space-y-4 max-w-xl">
             <h1 className="text-4xl font-bold">Sobre mim</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
