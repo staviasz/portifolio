@@ -1,0 +1,15 @@
+.changePageIcon {
+
+  @apply  sm:text-7xl text-5xl -mb-1 cursor-pointer;
+}
+
+.changePageSpan:has(+ .changePageIcon:hover),
+.changePageIcon:hover + .changePageSpan {
+
+  @apply opacity-100;
+}
+
+.changePageSpan {
+  
+  @apply -mx-5 transition-all duration-500 ease-in-out transform opacity-0 sm:inline-block hidden;
+}

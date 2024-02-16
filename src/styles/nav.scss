@@ -1,0 +1,25 @@
+.navLi {
+
+    @apply relative h-16 cursor-pointer text-gray text-lg border-t-[1px] border-blueDarkOpacity3 capitalize hover:italic;
+  
+    > .navDivFadeDown {
+      @apply h-0;
+    }
+  
+    > .navDivFadeUp  {
+      @apply h-0 relative top-full ;
+    }
+  
+    &:hover {
+      @apply transition-all duration-500;
+  
+      .navDivFadeDown,
+      .navDivFadeUp {
+        @apply bg-blueDarkOpacity4 w-full h-1/2 transition-all duration-1000;
+      }
+  
+      .navDivFadeUp {
+        @apply top-0 ;
+      }
+    }
+  }

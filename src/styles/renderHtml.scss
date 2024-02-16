@@ -1,0 +1,35 @@
+.divRenderHtml {
+  @apply text-base;
+  
+  & h1 {
+    @apply sm:text-4xl text-2xl font-bold mb-5;
+  }
+
+  & h2 {
+    @apply sm:text-xl text-lg max-w-lg font-bold mb-3;
+  }
+
+  & ul, ol {
+    @apply list-disc mb-5;
+
+    & li {
+      @apply ml-10;
+    }
+  }
+
+  & img {
+    @apply max-w-lg max-h-96 w-full h-full object-cover mb-6 block mx-auto;
+  }
+
+  & a {
+    @apply text-white font-bold;
+
+    &:hover {
+      @apply underline italic;
+    }
+  }
+
+  & p {
+    @apply mb-4;
+  }
+}

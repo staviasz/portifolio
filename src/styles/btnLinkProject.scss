@@ -1,0 +1,13 @@
+.btnLinkProject {
+  background-color: #2250b4;
+  box-shadow: 0 3px 4px -1px rgba(255,255,255, 0.4);
+  @apply text-center h-10 px-4 ;
+
+  &:hover {
+    @apply font-bold 
+  }
+
+  &:active {
+    @apply shadow-none transition-all translate-y-[2px] duration-150 
+  }
+}

@@ -7,7 +7,7 @@ export default function ProjectList() {
   const tags = ["nextjs", "typescript", "tailwindcss", "react"];
   return (
     <ul className="w-full sm:grid grid-cols-2 lg:gap-24 gap-10 space-y-6">
-      <li className="relative listProjectsItem cursor-pointer">
+      <li className="relative listProjectsItem cursor-pointer first:mt-6">
         <HeaderProjectImg />
         <Image
           src={img1}

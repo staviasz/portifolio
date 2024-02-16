@@ -17,7 +17,7 @@ export default function ContainerMain() {
           <h1 className="sm:text-4xl text-2xl font-bold mb-5">
             Developer portifolio
           </h1>
-          <p className="mb-14">
+          <p className="mb-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
             doloremque inventore ab quos quibusdam fugit quisquam sit deserunt
             corrupti eos natus ut facere porro commodi, sequi repudiandae a unde
