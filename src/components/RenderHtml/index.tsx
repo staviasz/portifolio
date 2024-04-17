@@ -1,5 +1,5 @@
 "use client";
-import * as DOMPurify from "dompurify";
+import DOMPurify from "dompurify";
 
 export default function RenderHtml({ html }: { html: string }) {
   const safeHtml = DOMPurify.sanitize(html);

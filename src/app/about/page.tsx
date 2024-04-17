@@ -1,8 +1,25 @@
+import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ChangePage from "@/components/ChangePage";
+import RenderHtml from "@/components/RenderHtml";
 import Image from "next/image";
-import img from "../../../public/WhatsApp_Image_2024-02-02_at_9.35-Photoroom__1_-removebg-preview.png";
+import getUser from "../service/getUser";
 
-export default function About() {
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  description: string;
+  imageUrl: string;
+  skills: Array<string>;
+  contactDescription: string;
+}
+
+export default async function About() {
+  const response = await getUser(new AxiosAdapter());
+  const user: User = { ...response };
+  user.imageUrl = response.image_url;
+  user.contactDescription = response.contact_description;
+
   return (
     <>
       <main className="py-20 relative mx-auto">
@@ -14,69 +31,17 @@ export default function About() {
         </ChangePage>
         <div className="fixed top-0 w-full h-full bg-black  ">
           <Image
-            src={img}
+            src={user.imageUrl}
             className="w-full h-screen object-contain"
-            alt="Erick Staviasz"
+            alt="Image profile"
+            width={300}
+            height={300}
           />
           <div className="absolute top-0 w-full h-full z-10 bg-shadow"></div>
         </div>
         <div className="absolute top-80 w-full h-full z-10">
-          <div className="lg:max-w-3xl mx-auto space-y-4 sm:max-w-xl max-w-72">
-            <h1 className="sm:text-4xl text-2xl font-bold">Sobre mim</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              voluptatum aliquam mollitia saepe vel explicabo cumque pariatur
-              eligendi dolores ipsam illo, quisquam distinctio aliquid
-              temporibus voluptatem quam possimus laboriosam laborum!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              voluptatum aliquam mollitia saepe vel explicabo cumque pariatur
-              eligendi dolores ipsam illo, quisquam distinctio aliquid
-              temporibus voluptatem quam possimus laboriosam laborum!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              voluptatum aliquam mollitia saepe vel explicabo cumque pariatur
-              eligendi dolores ipsam illo, quisquam distinctio aliquid
-              temporibus voluptatem quam possimus laboriosam laborum!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              voluptatum aliquam mollitia saepe vel explicabo cumque pariatur
-              eligendi dolores ipsam illo, quisquam distinctio aliquid
-              temporibus voluptatem quam possimus laboriosam laborum!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              voluptatum aliquam mollitia saepe vel explicabo cumque pariatur
-              eligendi dolores ipsam illo, quisquam distinctio aliquid
-              temporibus voluptatem quam possimus laboriosam laborum!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              voluptatum aliquam mollitia saepe vel explicabo cumque pariatur
-              eligendi dolores ipsam illo, quisquam distinctio aliquid
-              temporibus voluptatem quam possimus laboriosam laborum!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              voluptatum aliquam mollitia saepe vel explicabo cumque pariatur
-              eligendi dolores ipsam illo, quisquam distinctio aliquid
-              temporibus voluptatem quam possimus laboriosam laborum!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              voluptatum aliquam mollitia saepe vel explicabo cumque pariatur
-              eligendi dolores ipsam illo, quisquam distinctio aliquid
-              temporibus voluptatem quam possimus laboriosam laborum!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              voluptatum aliquam mollitia saepe vel explicabo cumque pariatur
-              eligendi dolores ipsam illo, quisquam distinctio aliquid
-              temporibus voluptatem quam possimus laboriosam laborum!
-            </p>
+          <div className="lg:max-w-3xl mx-auto space-y-4 sm:max-w-xl max-w-72 divRenderHtml pb-10">
+            <RenderHtml html={user.description} />
           </div>
         </div>
       </main>
