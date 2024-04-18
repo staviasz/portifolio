@@ -89,8 +89,11 @@ export default function FormContact() {
         placeholder="Mensagem"
         maxLength={1024}
       />
-      <div className="flex justify-between">
-        <button type="submit" className="btnLinkProject sm:max-w-40 max-w-28">
+      <div className="flex justify-between flex-col sm:flex-row">
+        <button
+          type="submit"
+          className="btnLinkProject sm:max-w-40 max-w-28 mb-4 sm:mb-0"
+        >
           Enviar
         </button>
         {success && (

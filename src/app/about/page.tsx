@@ -1,5 +1,6 @@
 import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ChangePage from "@/components/ChangePage";
+import Head from "@/components/Head";
 import RenderHtml from "@/components/RenderHtml";
 import Image from "next/image";
 import getUser from "../../service/getUser";
@@ -22,6 +23,7 @@ export default async function About() {
 
   return (
     <>
+      <Head />
       <main className="py-20 relative mx-auto">
         <ChangePage changePage="prev" link="/">
           Home
@@ -40,7 +42,7 @@ export default async function About() {
           <div className="absolute top-0 w-full h-full z-10 bg-shadow"></div>
         </div>
         <div className="absolute top-80 w-full h-full z-10">
-          <div className="lg:max-w-3xl mx-auto space-y-4 sm:max-w-xl max-w-72 divRenderHtml pb-10">
+          <div className="lg:max-w-3xl mx-auto space-y-4 sm:max-w-xl max-w-72 divRenderHtml pb-10 pl-2">
             <RenderHtml html={user.description} />
           </div>
         </div>

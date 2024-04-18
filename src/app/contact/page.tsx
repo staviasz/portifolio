@@ -4,6 +4,8 @@ import getUser from "@/service/getUser";
 
 export default async function Contact() {
   const response = await getUser(new AxiosAdapter());
+  console.log(response);
+
   return (
     <>
       <main className="w-full min-h-screen bg-blueDark mx-auto py-20">
