@@ -1,30 +1,16 @@
-import Input from "@/components/Input";
-import Textarea from "@/components/Textarea";
+import { AxiosAdapter } from "@/adapter/axiosResponse";
+import FormContact from "@/components/FormContact";
+import getUser from "@/service/getUser";
 
-export default function Contact() {
+export default async function Contact() {
+  const response = await getUser(new AxiosAdapter());
   return (
     <>
       <main className="w-full min-h-screen bg-blueDark mx-auto py-20">
         <div className="lg:max-w-4xl sm:max-w-xl max-w-64 mx-auto">
           <h1 className="sm:text-4xl text-2xl font-bold mb-5">Contato</h1>
-          <p className="mb-10">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            excepturi natus voluptatum minus explicabo sit, voluptate beatae!
-            Quam, quas, architecto facilis laborum suscipit ipsum, ex sequi
-            tempore provident dolorum repudiandae!
-          </p>
-          <form className="flex flex-col space-y-6 max-w-xl ">
-            <Input placeholder="Nome" type="text" />
-            <Input placeholder="Email" type="email" />
-            <Textarea
-              className="h-40 resize-none"
-              placeholder="Mensagem"
-              maxLength={1024}
-            />
-            <button className="btnLinkProject sm:max-w-40 max-w-28">
-              Enviar
-            </button>
-          </form>
+          <p className="mb-10">{response.contact_description}</p>
+          <FormContact />
         </div>
       </main>
     </>

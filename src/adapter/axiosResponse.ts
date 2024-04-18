@@ -21,6 +21,8 @@ export class AxiosAdapter implements HttpClientContract {
     const url = data.query
       ? `${baseUrl}${data.route}?${data.query}`
       : `${baseUrl}${data.route}`;
+    console.log(process.env.EMAIL_USER, process.env.PASSWORD_USER);
+
     try {
       const token = await axios
         .post(baseUrl + "/login", {

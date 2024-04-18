@@ -10,14 +10,18 @@ export default function ContainerButtonLinksProjects({
   linkDeploy,
 }: IContainerButtonLinksProjects) {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between mb-4">
       {linkDeploy && linkDeploy !== "None" && (
-        <Link href={linkDeploy} target="_blank">
-          <button className="btnLinkProject deploy mb-4">Link Deploy</button>
+        <Link
+          href={linkDeploy}
+          target="_blank"
+          className="btnLinkProject deploy"
+        >
+          Link Deploy
         </Link>
       )}
-      <Link href={linkCode} target="_blank">
-        <button className="btnLinkProject code mb-4">Link Code</button>
+      <Link href={linkCode} target="_blank" className="btnLinkProject code ">
+        Link Code
       </Link>
     </div>
   );

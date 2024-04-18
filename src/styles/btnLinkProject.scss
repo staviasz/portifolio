@@ -1,13 +1,13 @@
 .btnLinkProject {
-  box-shadow: 0 3px 4px -1px rgba(255,255,255, 0.4);
-  @apply text-center h-10 px-4 rounded;
+  box-shadow: 1px 5px 4px -1px rgba(255, 255, 255, 0.4);
+  @apply text-center h-10 px-4 rounded cursor-pointer py-2 ;
 
   &:hover {
     @apply font-bold 
   }
 
   &:active {
-    @apply shadow-none transition-all translate-y-[2px] duration-150 
+    @apply shadow-none transition-all translate-y-[1px] duration-150 
   }
 }
 

@@ -21,14 +21,22 @@ export default async function Project({ params }: { params: { id: number } }) {
   };
 
   const { name, description, techs, imagesUrls } = project;
+  const nexttId: number = Number(id) + 1;
+  const prevId: number = Number(id) - 1;
 
   return (
     <main className="w-full min-h-screen bg-blueDark text-gray py-20">
-      <ChangePage changePage="prev" link="/">
-        Home
-      </ChangePage>
-      <ChangePage changePage="next" link="/">
-        Home
+      {id <= 1 ? (
+        <ChangePage changePage="prev" link={`/projects`}>
+          Projects
+        </ChangePage>
+      ) : (
+        <ChangePage changePage="prev" link={`/projects/${prevId}`}>
+          Prev
+        </ChangePage>
+      )}
+      <ChangePage changePage="next" link={`/projects/${nexttId}`}>
+        Next
       </ChangePage>
       <div className="lg:max-w-3xl sm:max-w-xl max-w-64 mx-auto">
         <h1 className="text-4xl font-bold mb-5 capitalize">{name}</h1>

@@ -5,6 +5,7 @@ import { IProject } from "@/types/project";
 
 export default async function Projects() {
   const projects = await getProjects(new AxiosAdapter());
+  console.log(projects);
   const projectsList: Array<IProject> = projects.map((item: any) => {
     const project: IProject = {
       id: item.id,
@@ -20,7 +21,15 @@ export default async function Projects() {
 
   return (
     <>
-      <ContainerMain list={projectsList} route="/projects" />
+      <ContainerMain
+        list={projectsList}
+        route="/projects"
+        namePathPrev="Home"
+        pathPrev="/"
+        namePathNext="Posts"
+        pathNext="/posts"
+        description="Com uma ampla gama de tecnologias, incluindo JavaScript, TypeScript, Python, ReactJS e muito mais, cada projeto demonstra uma arquitetura robusta, testes de qualidade e colaboração efetiva em equipes multidisciplinares. Desde soluções de impacto social até inovações tecnológicas, cada projeto reflete minha paixão e habilidade como desenvolvedor full stack. Explore agora para descobrir como transformo ideias em realidade digital."
+      />
     </>
   );
 }
