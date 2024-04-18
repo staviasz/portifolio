@@ -16,6 +16,7 @@ const config: Config = {
         blueDarkOpacity5: "#1a1a33",
         gray: "#aaaaaa",
         shadow: "rgba(0, 0, 0, 0.9)",
+        shadowLigtgh: "#222222",
       },
     },
   },

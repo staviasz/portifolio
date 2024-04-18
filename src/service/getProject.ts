@@ -11,8 +11,6 @@ export default async function getProject(
     });
     return response.body;
   } catch (error) {
-    console.log(error);
-
     throw error;
   }
 }

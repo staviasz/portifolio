@@ -8,8 +8,6 @@ export default async function getPosts(httpClient: HttpClientContract) {
     });
     return response.body;
   } catch (error) {
-    console.log(error);
-
     throw error;
   }
 }

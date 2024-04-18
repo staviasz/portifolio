@@ -1,10 +1,10 @@
 import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ChangePage from "@/components/ChangePage";
+import ContainerButtonLinksProjects from "@/components/ContainerButtonLinksProjects";
 import Tag from "@/components/Tag";
 import ImageCarousel from "@/components/carousel";
 import getProject from "@/service/getProject";
 import { IProject } from "@/types/project";
-import Link from "next/link";
 
 export default async function Project({ params }: { params: { id: number } }) {
   const { id } = params;
@@ -36,15 +36,16 @@ export default async function Project({ params }: { params: { id: number } }) {
         {techs && (
           <ul className="mb-8 flex space-x-4 space-y-2 flex-wrap ">
             {techs.map(tag => (
-              <li key={tag} className="first:ml-4 first:mt-2">
+              <li key={tag} className="first:mt-2">
                 <Tag>{tag}</Tag>
               </li>
             ))}
           </ul>
         )}
-        <Link href={project.linkDeploy} target="_blank">
-          <button className="btnLinkProject mb-4">btn link project</button>
-        </Link>
+        <ContainerButtonLinksProjects
+          linkCode={project.linkCode}
+          linkDeploy={project.linkDeploy}
+        />
         <ImageCarousel images={imagesUrls} title={name} />
       </div>
     </main>

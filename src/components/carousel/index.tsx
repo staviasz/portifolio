@@ -17,14 +17,14 @@ export default function ImageCarousel({ images, title }: IImageCarrousel) {
     <div className="max-w-3xl mx-auto">
       <Swiper pagination={{ clickable: true }} navigation={true}>
         {images.map(image => (
-          <SwiperSlide key={image} className="h-auto sm:h-[368px]">
+          <SwiperSlide key={image} className="h-auto sm:h-[450px]">
             <HeaderProjectImg title={title} />
             <Image
               src={image}
               alt="Imagem 1"
               width={1000}
               height={1000}
-              className="object-cover w-full h-full"
+              className="w-full h-full object-cover"
             />
           </SwiperSlide>
         ))}
