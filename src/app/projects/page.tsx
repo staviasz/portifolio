@@ -5,7 +5,6 @@ import { IProject } from "@/types/project";
 
 export default async function Projects() {
   const projects = await getProjects(new AxiosAdapter());
-  console.log(projects);
   const projectsList: Array<IProject> = projects.map((item: any) => {
     const project: IProject = {
       id: item.id,

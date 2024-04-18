@@ -4,7 +4,6 @@ import getUser from "@/service/getUser";
 
 export default async function Contact() {
   const response = await getUser(new AxiosAdapter());
-  console.log(response);
 
   return (
     <>
