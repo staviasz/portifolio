@@ -9,16 +9,23 @@ import HeaderProjectImg from "../headerProjectImg";
 register();
 
 interface IImageCarrousel {
-  images: Array<any>;
+  images: Array<string>;
+  title: string;
 }
-export default function ImageCarousel({ images }: IImageCarrousel) {
+export default function ImageCarousel({ images, title }: IImageCarrousel) {
   return (
     <div className="max-w-3xl mx-auto">
       <Swiper pagination={{ clickable: true }} navigation={true}>
         {images.map(image => (
-          <SwiperSlide key={image}>
-            <HeaderProjectImg />
-            <Image src={image} alt="Imagem 1" className="sm:h-auto h-40" />
+          <SwiperSlide key={image} className="h-auto sm:h-[368px]">
+            <HeaderProjectImg title={title} />
+            <Image
+              src={image}
+              alt="Imagem 1"
+              width={1000}
+              height={1000}
+              className="object-cover w-full h-full"
+            />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,8 +1,15 @@
+import { IlistItem } from "@/types/listItem";
 import ChangePage from "../ChangePage";
 import Head from "../Head";
 import ProjectList from "../ProjectsList";
 
-export default function ContainerMain() {
+interface IContainerMain {
+  description?: string;
+  list: Array<IlistItem>;
+  route: string;
+}
+
+export default function ContainerMain({ list, route }: IContainerMain) {
   return (
     <>
       <Head subTitle="Portifolio" />
@@ -23,7 +30,7 @@ export default function ContainerMain() {
             corrupti eos natus ut facere porro commodi, sequi repudiandae a unde
             veniam?
           </p>
-          <ProjectList />
+          <ProjectList list={list} route={route} />
         </div>
       </main>
     </>

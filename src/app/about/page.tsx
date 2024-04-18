@@ -2,7 +2,7 @@ import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ChangePage from "@/components/ChangePage";
 import RenderHtml from "@/components/RenderHtml";
 import Image from "next/image";
-import getUser from "../service/getUser";
+import getUser from "../../service/getUser";
 
 interface User {
   id: number;
