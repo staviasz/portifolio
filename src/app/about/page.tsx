@@ -5,7 +5,7 @@ import RenderHtml from "@/components/RenderHtml";
 import Image from "next/image";
 import getUser from "../../service/getUser";
 
-interface User {
+export interface User {
   id: number;
   name: string;
   email: string;

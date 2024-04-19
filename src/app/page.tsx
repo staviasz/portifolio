@@ -1,8 +1,13 @@
+import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ChangePage from "@/components/ChangePage";
+import getUser from "@/service/getUser";
 import Image from "next/image";
-import profile from "../../public/WhatsApp_Image_2024-02-02_at_9.35-Photoroom__1_-removebg-preview.png";
+import { User } from "./about/page";
 
-export default function Home() {
+export default async function Home() {
+  const response = await getUser(new AxiosAdapter());
+  const user: User = { ...response };
+  user.imageUrl = response.image_url;
   return (
     <>
       <main className="px-20 flex relative items-center justify-center h-screen bg-black text-blueLigth font-bold max-h-screen overflow-hidden">
@@ -13,7 +18,9 @@ export default function Home() {
         </div>
         <div className="w-1/2 relative sm:block hidden">
           <Image
-            src={profile}
+            src={user.imageUrl}
+            width={300}
+            height={300}
             alt="foto de Erick Staviasz"
             className="w-full"
           />
