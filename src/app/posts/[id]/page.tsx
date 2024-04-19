@@ -11,19 +11,20 @@ export default async function Post({ params }: { params: { id: number } }) {
     getPost(new AxiosAdapter(), id),
     getPosts(new AxiosAdapter()),
   ]);
+  const firstIdArray = allPosts[0].id;
+  const lastIdArray = allPosts[allPosts.length - 1].id;
 
   const prev = {
-    name: Number(id) <= 1 ? "Posts" : "Prev",
-    link: Number(id) <= 1 ? "/posts" : `/posts/${Number(id) - 1}`,
+    name: Number(id) <= firstIdArray ? "Posts" : "Prev",
+    link: Number(id) <= firstIdArray ? "/posts" : `/posts/${Number(id) - 1}`,
   };
 
   const next = {
-    name: Number(id) >= allPosts.length ? "Skills" : "Next",
-    link:
-      Number(id) >= allPosts.length ? "/skills" : `/posts/${Number(id) + 1}`,
+    name: Number(id) >= lastIdArray ? "Skills" : "Next",
+    link: Number(id) >= lastIdArray ? "/skills" : `/posts/${Number(id) + 1}`,
   };
 
-  const { name, html } = post;
+  const { html } = post;
 
   return (
     <>
@@ -36,7 +37,6 @@ export default async function Post({ params }: { params: { id: number } }) {
           {next.name}
         </ChangePage>
         <div className="lg:max-w-3xl sm:max-w-xl max-w-64 mx-auto divRenderHtml">
-          <h1>{name}</h1>
           <RenderHtml html={html} />
         </div>
       </main>

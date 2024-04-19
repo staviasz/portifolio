@@ -8,7 +8,7 @@ export default function ContainerSkillsIcons({
   namesIcon,
 }: IContainerSkillsIcons) {
   return (
-    <div className="sm:px-10 pr-4 flex-wrap flex justify-center space-x-4 space-y-4">
+    <div className="sm:p-10 pr-4 flex-wrap flex justify-center space-x-4 space-y-4">
       {namesIcon.map(nameIcon => (
         <div
           key={nameIcon}
