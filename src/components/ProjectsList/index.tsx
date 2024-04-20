@@ -1,7 +1,6 @@
 import { IlistItem } from "@/types/listItem";
 import Image from "next/image";
 import Link from "next/link";
-import Tag from "../Tag";
 import HeaderProjectImg from "../headerProjectImg";
 
 export interface IProjectList {
@@ -26,30 +25,6 @@ export default function ProjectList({ list, route }: IProjectList) {
               width={500}
               height={500}
             />
-            {item.techs && (
-              <div className="absolute top-[26px] listProjectsSecondaryImg">
-                <Image
-                  src={item.imagesUrls[1]}
-                  alt=""
-                  className="h-0 object-cover img"
-                  width={500}
-                  height={500}
-                />
-                <div className="absolute top-0 w-full h-full z-10 bg-shadow"></div>
-                <div className="opacity-0 absolute top-0 w-full div">
-                  <ul className="ul">
-                    {item.techs.slice(0, 5).map(tag => (
-                      <li key={tag} className="li">
-                        <Tag>{tag}</Tag>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className=" absolute top-[150%] w-full flex justify-center">
-                    <Tag className="max-w-max">more...</Tag>
-                  </div>
-                </div>
-              </div>
-            )}
           </Link>
         </li>
       ))}

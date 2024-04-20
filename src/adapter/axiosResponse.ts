@@ -23,21 +23,11 @@ export class AxiosAdapter implements HttpClientContract {
       : `${baseUrl}${data.route}`;
 
     try {
-      const token = await axios
-        .post(baseUrl + "/login", {
-          email: process.env.EMAIL_USER,
-          password: process.env.PASSWORD_USER,
-        })
-        .then(res => res.data.token);
-
       axiosResponse = await axios.request({
         url,
         method: data.method,
         data: data.body,
-        headers: {
-          ...data.headers,
-          Authorization: `Bearer ${token}`,
-        },
+        headers: data.headers,
       });
     } catch (error) {
       const { response } = error as AxiosError;

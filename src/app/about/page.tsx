@@ -1,9 +1,9 @@
-import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ChangePage from "@/components/ChangePage";
-import Head from "@/components/Head";
 import RenderHtml from "@/components/RenderHtml";
+import getUser from "@/service/getUser";
+import executeService from "@/utils/functions/executeService";
 import Image from "next/image";
-import getUser from "../../service/getUser";
+import { metadata } from "../layout";
 
 export interface User {
   id: number;
@@ -16,14 +16,15 @@ export interface User {
 }
 
 export default async function About() {
-  const response = await getUser(new AxiosAdapter());
+  metadata.title = "Erick Staviasz - About";
+  const response = await executeService(getUser);
+
   const user: User = { ...response };
   user.imageUrl = response.image_url;
   user.contactDescription = response.contact_description;
 
   return (
     <>
-      <Head />
       <main className="py-20 relative mx-auto">
         <ChangePage changePage="prev" link="/">
           Home

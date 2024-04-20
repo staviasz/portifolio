@@ -1,15 +1,16 @@
-import { AxiosAdapter } from "@/adapter/axiosResponse";
+import { metadata } from "@/app/layout";
 import ChangePage from "@/components/ChangePage";
-import Head from "@/components/Head";
 import RenderHtml from "@/components/RenderHtml";
 import getPost from "@/service/getPost";
 import getPosts from "@/service/getPosts";
+import executeService from "@/utils/functions/executeService";
 
 export default async function Post({ params }: { params: { id: number } }) {
+  metadata.title = "Erick Staviasz - Post";
   const { id } = params;
   const [post, allPosts] = await Promise.all([
-    getPost(new AxiosAdapter(), id),
-    getPosts(new AxiosAdapter()),
+    executeService(getPost, id),
+    executeService(getPosts),
   ]);
   const firstIdArray = allPosts[0].id;
   const lastIdArray = allPosts[allPosts.length - 1].id;
@@ -28,7 +29,6 @@ export default async function Post({ params }: { params: { id: number } }) {
 
   return (
     <>
-      <Head />
       <main className="w-full min-h-screen bg-blueDark py-20">
         <ChangePage changePage="prev" link={prev.link}>
           {prev.name}

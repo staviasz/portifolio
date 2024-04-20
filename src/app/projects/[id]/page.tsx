@@ -1,18 +1,19 @@
-import { AxiosAdapter } from "@/adapter/axiosResponse";
+import { metadata } from "@/app/layout";
 import ChangePage from "@/components/ChangePage";
 import ContainerButtonLinksProjects from "@/components/ContainerButtonLinksProjects";
-import Head from "@/components/Head";
 import Tag from "@/components/Tag";
 import ImageCarousel from "@/components/carousel";
 import getProject from "@/service/getProject";
 import getProjects from "@/service/getProjects";
 import { IProject } from "@/types/project";
+import executeService from "@/utils/functions/executeService";
 
 export default async function Project({ params }: { params: { id: number } }) {
+  metadata.title = "Erick Staviasz - Project";
   const { id } = params;
   const [projectRes, allProjects] = await Promise.all([
-    getProject(new AxiosAdapter(), id),
-    getProjects(new AxiosAdapter()),
+    executeService(getProject, id),
+    executeService(getProjects),
   ]);
 
   const project: IProject = {
@@ -38,12 +39,11 @@ export default async function Project({ params }: { params: { id: number } }) {
 
   const next = {
     name: Number(id) >= lastIdArray ? "Skills" : "Next",
-    link: Number(id) >= lastIdArray ? "/skills" : `/posts/${Number(id) + 1}`,
+    link: Number(id) >= lastIdArray ? "/skills" : `/projects/${Number(id) + 1}`,
   };
 
   return (
     <>
-      <Head />
       <main className="w-full min-h-screen bg-blueDark text-gray py-20">
         <ChangePage changePage="prev" link={prev.link}>
           {prev.name}

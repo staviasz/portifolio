@@ -1,11 +1,12 @@
-import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ChangePage from "@/components/ChangePage";
 import getUser from "@/service/getUser";
+import executeService from "@/utils/functions/executeService";
 import Image from "next/image";
 import { User } from "./about/page";
 
 export default async function Home() {
-  const response = await getUser(new AxiosAdapter());
+  const response = await executeService(getUser);
+
   const user: User = { ...response };
   user.imageUrl = response.image_url;
   return (

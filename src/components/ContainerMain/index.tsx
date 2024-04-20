@@ -1,6 +1,5 @@
 import { IlistItem } from "@/types/listItem";
 import ChangePage from "../ChangePage";
-import Head from "../Head";
 import ProjectList from "../ProjectsList";
 
 interface IContainerMain {
@@ -24,7 +23,6 @@ export default function ContainerMain({
 }: IContainerMain) {
   return (
     <>
-      <Head subTitle="Portifolio" />
       <main className="w-full min-h-screen bg-blueDark text-gray py-20">
         <ChangePage changePage="prev" link={pathPrev}>
           {namePathPrev}

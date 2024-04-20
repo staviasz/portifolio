@@ -1,10 +1,12 @@
-import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ContainerMain from "@/components/ContainerMain";
 import getPosts from "@/service/getPosts";
 import { IlistItem } from "@/types/listItem";
+import executeService from "@/utils/functions/executeService";
+import { metadata } from "../layout";
 
 export default async function Posts() {
-  const response = await getPosts(new AxiosAdapter());
+  metadata.title = "Erick Staviasz - Posts";
+  const response = await executeService(getPosts);
 
   const listItemPosts = response.map((item: any) => {
     const post: IlistItem = {
