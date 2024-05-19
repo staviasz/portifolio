@@ -42,14 +42,14 @@ export default async function Project({ params }: { params: { id: number } }) {
   const lastIdArray = allProjects[allProjects.length - 1].id;
 
   const prev = {
-    name: Number(id) <= firstIdArray ? "Projects" : "Prev",
+    name: Number(id) >= lastIdArray ? "Projects" : "Prev",
     link:
-      Number(id) <= firstIdArray ? "/projects" : `/projects/${Number(id) - 1}`,
+      Number(id) >= lastIdArray ? "/projects" : `/projects/${Number(id) + 1}`,
   };
 
   const next = {
-    name: Number(id) >= lastIdArray ? "Skills" : "Next",
-    link: Number(id) >= lastIdArray ? "/skills" : `/projects/${Number(id) + 1}`,
+    name: Number(id) > firstIdArray ? "Next" : "Posts",
+    link: Number(id) > firstIdArray ? `/projects/${Number(id) - 1}` : "/posts",
   };
 
   return (

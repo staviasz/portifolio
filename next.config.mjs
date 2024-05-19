@@ -8,7 +8,13 @@ const nextConfig = {
     includePaths: [path.join(dirname, "styles")],
   },
   images: {
-    domains: ["portifoliostaviasz.s3.us-east-005.backblazeb2.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "portifoliostaviasz.s3.us-east-005.backblazeb2.com",
+        pathname: "/**",
+      },
+    ],
   },
 };
 

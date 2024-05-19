@@ -4,7 +4,7 @@ interface IHeaderProjectImg {
 
 export default function HeaderProjectImg({ title }: IHeaderProjectImg) {
   return (
-    <div className="bg-white flex items-center px-3">
+    <div className="bg-white flex items-center px-3 rounded-t-md">
       <div className="flex items-center">
         <span className="inline-block w-4 h-4 bg-red-700 mr-2 rounded-full"></span>
         <span className="inline-block w-4 h-4 bg-yellow-500 mr-2 rounded-full"></span>

@@ -30,27 +30,20 @@ export default async function Post({ params }: IParams) {
   metadata.title = "Erick Staviasz - Post";
   const { id } = params;
 
-  const post = await getPost(
-    new AxiosAdapter(),
-    // process.env.TOKEN_USER!,
-    Number(id),
-  );
+  const post = await getPost(new AxiosAdapter(), Number(id));
   const allPosts = await getPosts(new AxiosAdapter());
-
-  // const post = await executeService(new AxiosAdapter(), getPost, id);
-  // const allPosts = await executeService(new AxiosAdapter(), getPosts);
 
   const firstIdArray = allPosts[0]!.id;
   const lastIdArray = allPosts[allPosts.length - 1]!.id;
 
   const prev = {
-    name: post.id <= firstIdArray ? "Posts" : "Prev",
-    link: post.id <= firstIdArray ? "/posts" : `/posts/${post.id - 1}`,
+    name: post.id >= lastIdArray ? "Posts" : "Prev",
+    link: post.id >= lastIdArray ? "/posts" : `/posts/${post.id + 1}`,
   };
 
   const next = {
-    name: post.id >= lastIdArray ? "Skills" : "Next",
-    link: post.id >= lastIdArray ? "/skills" : `/posts/${post.id + 1}`,
+    name: post.id > firstIdArray ? "Next" : "Skills",
+    link: post.id > firstIdArray ? `/posts/${Number(id) - 1}` : "/skills",
   };
 
   const { html } = post;

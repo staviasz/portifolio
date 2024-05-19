@@ -21,7 +21,7 @@ export default function ProjectList({ list, route }: IProjectList) {
             <Image
               src={item.imagesUrls[0]}
               alt=""
-              className="lg:h-72 h-60 object-cover border-t-2 border-red-400"
+              className="lg:h-72 h-60 object-cover border-t-2 border-red-400 rounded-b-md"
               width={500}
               height={500}
             />
