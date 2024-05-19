@@ -2,6 +2,7 @@ import { AxiosAdapter } from "@/adapter/axiosResponse";
 import { metadata } from "@/app/layout";
 import ChangePage from "@/components/ChangePage";
 import ContainerButtonLinksProjects from "@/components/ContainerButtonLinksProjects";
+import OpacyTop from "@/components/OpacyTop";
 import Tag from "@/components/Tag";
 import ImageCarousel from "@/components/carousel";
 import getProject from "@/service/getProject";
@@ -55,19 +56,20 @@ export default async function Project({ params }: { params: { id: number } }) {
   return (
     <>
       <main className="w-full min-h-screen bg-blueDark text-gray py-20">
+        <OpacyTop />
         <ChangePage changePage="prev" link={prev.link}>
           {prev.name}
         </ChangePage>
         <ChangePage changePage="next" link={next.link}>
           {next.name}
         </ChangePage>
-        <div className="lg:max-w-3xl sm:max-w-xl max-w-64 mx-auto">
+        <div className="lg:max-w-3xl sm:max-w-xl max-w-[355px] mx-auto">
           <h1 className="text-4xl font-bold mb-5 capitalize">{name}</h1>
           <p className="mb-5 text-lg">{description}</p>
           {techs && (
-            <ul className="mb-8 flex space-x-4 space-y-2 flex-wrap ">
+            <ul className="mb-8 flex space-x-2 space-y-2 flex-wrap ">
               {techs.map(tag => (
-                <li key={tag} className="first:mt-2">
+                <li key={tag} className="first:mt-2 first:ml-2">
                   <Tag>{tag}</Tag>
                 </li>
               ))}

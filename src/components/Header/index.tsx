@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header
-      className={`${heigth} flex flex-col items-end w-full justify-end fixed top-0 left-0 z-30`}
+      className={`${heigth} flex flex-col items-end w-full justify-end fixed top-0 left-0 z-30 `}
     >
       {isOpen ? (
         <>

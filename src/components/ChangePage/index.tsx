@@ -8,10 +8,10 @@ interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export default function ChangePage(props: IButton) {
-  const color = !props.textColorBody ? "" : "text-gray";
+  const color = !props.textColorBody ? "text-blueLigth" : "sm:text-gray";
   const position = props.changePage === "next" ? "right-0" : "-left-10";
   return (
-    <button className={`fixed top-1/2 z-20 ${position}`}>
+    <button className={`fixed sm:top-1/2 top-[90%] z-20 ${position} `}>
       <Link
         href={props.link}
         className="ms-10 flex items-center cursor-auto text-sm"
@@ -24,7 +24,7 @@ export default function ChangePage(props: IButton) {
         ) : (
           <>
             <IoIosArrowBack className="changePageIcon" />
-            <span className={`${color} changePageSpan`}>{props.children}</span>
+            <span className={`${color}  changePageSpan`}>{props.children}</span>
           </>
         )}
       </Link>

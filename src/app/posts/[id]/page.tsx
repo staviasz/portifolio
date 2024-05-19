@@ -1,6 +1,7 @@
 import { AxiosAdapter } from "@/adapter/axiosResponse";
 import { metadata } from "@/app/layout";
 import ChangePage from "@/components/ChangePage";
+import OpacyTop from "@/components/OpacyTop";
 import RenderHtml from "@/components/RenderHtml";
 import getPost from "@/service/getPost";
 import getPosts from "@/service/getPosts";
@@ -51,13 +52,14 @@ export default async function Post({ params }: IParams) {
   return (
     <>
       <main className="w-full min-h-screen bg-blueDark py-20">
+        <OpacyTop />
         <ChangePage changePage="prev" link={prev.link}>
           {prev.name}
         </ChangePage>
         <ChangePage changePage="next" link={next.link}>
           {next.name}
         </ChangePage>
-        <div className="lg:max-w-3xl sm:max-w-xl max-w-64 mx-auto divRenderHtml">
+        <div className="lg:max-w-3xl sm:max-w-xl max-w-[355px] mx-auto divRenderHtml">
           <RenderHtml html={html} />
         </div>
       </main>

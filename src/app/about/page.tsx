@@ -40,8 +40,8 @@ export default async function About() {
             />
             <div className="absolute top-0 w-full h-full z-10 bg-shadow"></div>
           </div>
-          <div className="absolute top-80 w-full h-full z-10">
-            <div className="lg:max-w-3xl mx-auto space-y-4 sm:max-w-xl max-w-72 divRenderHtml pb-10 pl-2">
+          <div className="absolute sm:top-80 top-28 w-full h-full z-10">
+            <div className="lg:max-w-3xl mx-auto space-y-4 sm:max-w-xl max-w-[365px] divRenderHtml pb-10 pl-2 sm:max-h-none max-h-[30rem] overflow-x-auto">
               <RenderHtml html={user.description} />
             </div>
           </div>

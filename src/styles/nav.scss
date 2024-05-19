@@ -1,6 +1,6 @@
 .navLi {
 
-    @apply relative h-16 cursor-pointer text-gray text-lg border-t-[1px] border-blueDarkOpacity3 capitalize hover:italic;
+    @apply relative h-16 cursor-pointer text-gray text-lg border-t-[1px] border-blueDarkOpacity3  capitalize hover:italic;
   
     > .navDivFadeDown {
       @apply h-0;

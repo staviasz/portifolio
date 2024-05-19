@@ -14,7 +14,9 @@ export default function Nav({ listNav, setIsOpen }: IList) {
             <li className="navLi" onClick={() => setIsOpen(false)}>
               <div className="navDivFadeDown"></div>
 
-              <span className="absolute z-10 top-[25%] left-[45%]">{item}</span>
+              <span className="absolute z-10 top-[25%] sm:left-[44%] left-[41%]">
+                {item}
+              </span>
 
               <div className="navDivFadeUp"></div>
             </li>
