@@ -1,16 +1,10 @@
 import { HttpClientContract } from "@/adapter/axiosResponse";
 
-export default async function getUser(
-  httpClient: HttpClientContract,
-  authorization: string,
-) {
+export default async function getUser(httpClient: HttpClientContract) {
   try {
     const response = await httpClient.request({
-      route: "/user/profile",
+      route: "/user/1",
       method: "get",
-      headers: {
-        Authorization: `Bearer ${authorization}`,
-      },
     });
     return response.body;
   } catch (error) {

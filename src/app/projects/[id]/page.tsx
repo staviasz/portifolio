@@ -1,3 +1,4 @@
+import { AxiosAdapter } from "@/adapter/axiosResponse";
 import { metadata } from "@/app/layout";
 import ChangePage from "@/components/ChangePage";
 import ContainerButtonLinksProjects from "@/components/ContainerButtonLinksProjects";
@@ -6,17 +7,26 @@ import ImageCarousel from "@/components/carousel";
 import getProject from "@/service/getProject";
 import getProjects from "@/service/getProjects";
 import { IProject } from "@/types/project";
-import executeService from "@/utils/functions/executeService";
+
+export async function generateStaticParams() {
+  const allProjects = await getProjects(new AxiosAdapter());
+
+  const project = allProjects.map((Project: IProject) => {
+    return { id: Project.id.toString() };
+  });
+
+  return project;
+}
 
 export default async function Project({ params }: { params: { id: number } }) {
   metadata.title = "Erick Staviasz - Project";
   const { id } = params;
   const [projectRes, allProjects] = await Promise.all([
-    executeService(getProject, id),
-    executeService(getProjects),
+    getProject(new AxiosAdapter(), id),
+    getProjects(new AxiosAdapter()),
   ]);
 
-  const project: IProject = {
+  const project: IProject = projectRes && {
     id: projectRes.id,
     name: projectRes.name,
     description: projectRes.description,

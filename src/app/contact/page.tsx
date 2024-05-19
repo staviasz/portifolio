@@ -1,12 +1,12 @@
+import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ChangePage from "@/components/ChangePage";
 import FormContact from "@/components/FormContact";
 import getUser from "@/service/getUser";
-import executeService from "@/utils/functions/executeService";
 import { metadata } from "../layout";
 
 export default async function Contact() {
   metadata.title = "Erick Staviasz - Contact";
-  const response = await executeService(getUser);
+  const response = await getUser(new AxiosAdapter());
 
   return (
     <>

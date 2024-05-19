@@ -1,5 +1,5 @@
-import CustomErrorApi from "@/error/customErrorApi";
 import axios, { AxiosError, AxiosResponse } from "axios";
+import CustomErrorApi from "../error/customErrorApi";
 
 interface RequestContract {
   route: string;
@@ -31,7 +31,6 @@ export class AxiosAdapter implements HttpClientContract {
       });
     } catch (error) {
       const { response } = error as AxiosError;
-
       throw new CustomErrorApi(
         response?.status || 500,
         response?.data || "Internal server error",
