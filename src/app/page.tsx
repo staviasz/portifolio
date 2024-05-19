@@ -1,7 +1,6 @@
 import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ChangePage from "@/components/ChangePage";
 import getUser from "@/service/getUser";
-import Image from "next/image";
 import { User } from "./about/page";
 
 export default async function Home() {
@@ -19,7 +18,7 @@ export default async function Home() {
             </h1>
           </div>
           <div className="w-1/2 relative sm:block hidden">
-            <Image
+            <img
               src={user.imageUrl}
               width={300}
               height={300}

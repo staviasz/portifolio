@@ -34,7 +34,7 @@ export default async function About() {
             Projetos
           </ChangePage>
           <div className="fixed top-0 w-full h-full bg-black  ">
-            <Image
+            <img
               src={user.imageUrl}
               className="w-full h-screen object-contain"
               alt="Image profile"

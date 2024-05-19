@@ -18,7 +18,7 @@ export default function ProjectList({ list, route }: IProjectList) {
         >
           <Link href={`${route}/${item.id}`}>
             <HeaderProjectImg title={item.name} />
-            <Image
+            <img
               src={item.imagesUrls[0]}
               alt=""
               className="lg:h-72 h-60 object-cover border-t-2 border-red-400 rounded-b-md"

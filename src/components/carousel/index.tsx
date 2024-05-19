@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
@@ -19,7 +18,7 @@ export default function ImageCarousel({ images, title }: IImageCarrousel) {
         {images.map(image => (
           <SwiperSlide key={image} className="h-auto sm:h-[450px]">
             <HeaderProjectImg title={title} />
-            <Image
+            <img
               src={image}
               alt="Imagem 1"
               width={768}
