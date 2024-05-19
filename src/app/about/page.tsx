@@ -2,7 +2,6 @@ import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ChangePage from "@/components/ChangePage";
 import RenderHtml from "@/components/RenderHtml";
 import getUser from "@/service/getUser";
-import Image from "next/image";
 import { metadata } from "../layout";
 
 export interface User {
@@ -38,8 +37,6 @@ export default async function About() {
               src={user.imageUrl}
               className="w-full h-screen object-contain"
               alt="Image profile"
-              width={300}
-              height={300}
             />
             <div className="absolute top-0 w-full h-full z-10 bg-shadow"></div>
           </div>

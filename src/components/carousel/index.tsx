@@ -21,8 +21,6 @@ export default function ImageCarousel({ images, title }: IImageCarrousel) {
             <img
               src={image}
               alt="Imagem 1"
-              width={768}
-              height={450}
               className="w-full h-full object-cover"
             />
           </SwiperSlide>
