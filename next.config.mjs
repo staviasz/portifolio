@@ -14,6 +14,11 @@ const nextConfig = {
         hostname: "portifoliostaviasz.s3.us-east-005.backblazeb2.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "portifolioStaviasz.s3.us-east-005.backblazeb2.com",
+        pathname: "/**",
+      },
     ],
   },
 };
