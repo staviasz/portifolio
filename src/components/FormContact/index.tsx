@@ -7,7 +7,7 @@ import validator from "validator";
 import Input from "../Input";
 import Textarea from "../Textarea";
 
-interface IFormContact {
+export interface IFormContact {
   name: string;
   email: string;
   message: string;

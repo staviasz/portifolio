@@ -3,7 +3,7 @@ import ChangePage from "../ChangePage";
 import OpacyTop from "../OpacyTop";
 import ProjectList from "../ProjectsList";
 
-interface IContainerMain {
+export interface IContainerMain {
   description: string;
   list: Array<IlistItem>;
   route: string;

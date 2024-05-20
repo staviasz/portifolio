@@ -1,6 +1,6 @@
 .btnLinkProject {
   box-shadow: 1px 5px 4px -1px rgba(255, 255, 255, 0.4);
-  @apply text-center h-10 px-4 rounded cursor-pointer py-2 ;
+  @apply text-center h-10 px-4 rounded cursor-pointer py-2 text-gray w-40;
 
   &:hover {
     @apply font-bold 

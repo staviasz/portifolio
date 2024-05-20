@@ -1,6 +1,6 @@
 import { IlistItem } from "@/types/listItem";
 import Link from "next/link";
-import HeaderProjectImg from "../headerProjectImg";
+import HeaderProjectImg from "../HeaderProjectImg";
 
 export interface IProjectList {
   list: Array<IlistItem>;

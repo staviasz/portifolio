@@ -1,6 +1,7 @@
 import { UseFormRegisterReturn } from "react-hook-form";
 
-interface IInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface IInputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   register?: UseFormRegisterReturn<string>;
   messageError?: string;
   classNameInput?: string;

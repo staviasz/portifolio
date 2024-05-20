@@ -1,6 +1,6 @@
 import { UseFormRegisterReturn } from "react-hook-form";
 
-interface ITextareaProps
+export interface ITextareaProps
   extends React.InputHTMLAttributes<HTMLTextAreaElement> {
   register?: UseFormRegisterReturn<string>;
   messageError?: string;

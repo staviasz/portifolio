@@ -1,4 +1,4 @@
-interface IHeaderProjectImg {
+export interface IHeaderProjectImg {
   title: string;
 }
 

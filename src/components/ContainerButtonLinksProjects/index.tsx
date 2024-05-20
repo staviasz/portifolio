@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-interface IContainerButtonLinksProjects {
+export interface IContainerButtonLinksProjects {
   linkCode: string;
   linkDeploy?: string;
 }
