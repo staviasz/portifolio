@@ -34,10 +34,10 @@ export default async function About() {
           <ChangePage changePage="next" link="/projects">
             Projetos
           </ChangePage>
-          <div className="fixed sm:top-0 top-auto bottom-0 w-full h-full bg-black  ">
+          <div className="fixed sm:top-0 top-auto bottom-0 w-full h-full bg-black ">
             <img
               src={user.imageUrl}
-              className="w-full h-screen object-contain"
+              className="w-[500px] m-auto h-screen object-contain sm:block hidden"
               alt="Image profile"
             />
             <div className="absolute top-0 w-full h-full z-10 bg-shadow"></div>
