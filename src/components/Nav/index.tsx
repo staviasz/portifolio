@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-interface IList {
+export interface INav {
   listNav: string[];
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function Nav({ listNav, setIsOpen }: IList) {
+export default function Nav({ listNav, setIsOpen }: INav) {
   return (
     <nav className="w-full h-full bg-blueDark flex items-center justify-center px-6">
       <ul className=" max-w-[600px] w-full bg-blueDarkOpacity5 text-center max-h-[600px]  border-[1px] border-blueDarkOpacity3 border-t-0">

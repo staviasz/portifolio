@@ -4,8 +4,11 @@ import Close from "../Close";
 import Hamburguer from "../Hamburguer";
 import Nav from "../Nav";
 
-export default function Header() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+export interface IHeader {
+  isOpen?: boolean;
+}
+export default function Header({ isOpen: open }: IHeader) {
+  const [isOpen, setIsOpen] = useState<boolean>(open || false);
   const heigth = isOpen ? "h-screen" : "h-20";
   const listNav = ["about", "projects", "posts", "skills", "contact"];
 

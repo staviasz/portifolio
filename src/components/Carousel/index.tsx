@@ -4,10 +4,10 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { register } from "swiper/element-bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
-import HeaderProjectImg from "../headerProjectImg";
+import HeaderProjectImg from "../HeaderProjectImg";
 register();
 
-interface IImageCarrousel {
+export interface IImageCarrousel {
   images: Array<string>;
   title: string;
 }

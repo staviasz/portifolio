@@ -1,14 +1,15 @@
 import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   textColorBody?: boolean;
   changePage: "next" | "prev";
   link: string;
 }
 
 export default function ChangePage(props: IButton) {
-  const color = !props.textColorBody ? "text-blueLigth" : "sm:text-gray";
+  const color = props.textColorBody ? "text-blueLigth" : "text-gray";
+
   const position = props.changePage === "next" ? "right-0" : "-left-10";
   return (
     <button className={`fixed sm:top-1/2 top-[90%] z-20 ${position} `}>
@@ -18,13 +19,19 @@ export default function ChangePage(props: IButton) {
       >
         {props.changePage === "next" ? (
           <>
-            <span className={`${color} changePageSpan`}>{props.children}</span>
-            <IoIosArrowForward className="changePageIcon" />
+            <span className={`${color} changePageSpan `}>{props.children}</span>
+            <IoIosArrowForward
+              className={`${color} changePageIcon cursor-pointer`}
+            />
           </>
         ) : (
           <>
-            <IoIosArrowBack className="changePageIcon" />
-            <span className={`${color}  changePageSpan`}>{props.children}</span>
+            <IoIosArrowBack
+              className={`${color} changePageIcon cursor-pointer`}
+            />
+            <span className={`${color}  changePageSpan cursor-pointer`}>
+              {props.children}
+            </span>
           </>
         )}
       </Link>

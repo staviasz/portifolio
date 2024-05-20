@@ -1,6 +1,6 @@
 import RenderIcon from "../RenderIcon";
 
-interface IContainerSkillsIcons {
+export interface IContainerSkillsIcons {
   namesIcon: Array<string>;
 }
 
@@ -12,7 +12,7 @@ export default function ContainerSkillsIcons({
       {namesIcon.map(nameIcon => (
         <div
           key={nameIcon}
-          className="bg-shadowLigtgh first:mt-4 first:ml-4 sm:w-20 sm:h-16 p-4  rounded-md flex flex-col justify-center items-center"
+          className="bg-shadowLigtgh first:mt-4 first:ml-4 sm:w-20 sm:h-16 p-4  rounded-md flex flex-col justify-center items-center text-gray"
         >
           <div className="sm:text-3xl text-4xl">
             <RenderIcon nomeIcone={nameIcon} />

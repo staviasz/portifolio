@@ -1,10 +1,10 @@
 import { AxiosAdapter } from "@/adapter/axiosResponse";
 import { metadata } from "@/app/layout";
+import ImageCarousel from "@/components/Carousel";
 import ChangePage from "@/components/ChangePage";
 import ContainerButtonLinksProjects from "@/components/ContainerButtonLinksProjects";
 import OpacyTop from "@/components/OpacyTop";
 import Tag from "@/components/Tag";
-import ImageCarousel from "@/components/carousel";
 import getProject from "@/service/getProject";
 import getProjects from "@/service/getProjects";
 import { IProject } from "@/types/project";

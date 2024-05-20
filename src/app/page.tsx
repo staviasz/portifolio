@@ -11,19 +11,19 @@ export default async function Home() {
   return (
     <>
       {response && (
-        <main className="px-20 flex relative items-center justify-center h-screen bg-black text-blueLigth font-bold max-h-screen overflow-hidden">
+        <main className="px-20 flex relative items-center justify-center h-screen bg-black text-gray font-bold max-h-screen overflow-hidden">
           <div className="">
-            <h1 className="sm:text-8xl sm:max-w-sm max-w-36 text-5xl">
+            <h1 className="sm:text-8xl sm:mt-16 sm:max-w-sm max-w-36 text-5xl">
               Hello I am Erick
             </h1>
           </div>
-          <div className="w-1/2 relative sm:block hidden">
+          <div className="w-1/2 h-full relative lg:flex items-end justify-center hidden">
             <img
               src={user.imageUrl}
               width={300}
               height={300}
               alt="foto de Erick Staviasz"
-              className="w-full"
+              className="relative max-w-md w-full bottom-0 object-contain"
             />
             <div className="absolute top-0 w-full h-full z-10 bg-shadow"></div>
           </div>
