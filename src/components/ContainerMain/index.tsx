@@ -32,7 +32,7 @@ export default function ContainerMain({
         <ChangePage changePage="next" link={pathNext}>
           {namePathNext}
         </ChangePage>
-        <div className="lg:max-w-5xl sm:max-w-xl max-w-[355px] mx-auto">
+        <div className="lg:max-w-5xl sm:max-w-xl max-w-full mx-auto px-3">
           <h1 className="sm:text-4xl text-2xl font-bold mb-5">
             Developer portifolio
           </h1>

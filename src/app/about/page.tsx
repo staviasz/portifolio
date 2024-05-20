@@ -1,5 +1,6 @@
 import { AxiosAdapter } from "@/adapter/axiosResponse";
 import ChangePage from "@/components/ChangePage";
+import OpacyTop from "@/components/OpacyTop";
 import RenderHtml from "@/components/RenderHtml";
 import getUser from "@/service/getUser";
 import { metadata } from "../layout";
@@ -26,13 +27,14 @@ export default async function About() {
     <>
       {user && (
         <main className="py-20 relative mx-auto">
+          <OpacyTop bgColor="bg-black" />
           <ChangePage changePage="prev" link="/">
             Home
           </ChangePage>
           <ChangePage changePage="next" link="/projects">
             Projetos
           </ChangePage>
-          <div className="fixed top-0 w-full h-full bg-black  ">
+          <div className="fixed sm:top-0 top-auto bottom-0 w-full h-full bg-black  ">
             <img
               src={user.imageUrl}
               className="w-full h-screen object-contain"
@@ -40,8 +42,8 @@ export default async function About() {
             />
             <div className="absolute top-0 w-full h-full z-10 bg-shadow"></div>
           </div>
-          <div className="absolute sm:top-80 top-28 w-full h-full z-10">
-            <div className="lg:max-w-3xl mx-auto space-y-4 sm:max-w-xl max-w-[365px] divRenderHtml pb-10 pl-2 sm:max-h-none max-h-[30rem] overflow-x-auto">
+          <div className="absolute sm:top-80 top-28 w-full h-full z-10 px-3">
+            <div className="lg:max-w-3xl mx-auto space-y-4 sm:max-w-xl max-w-full divRenderHtml pb-10 pl-2 ">
               <RenderHtml html={user.description} />
             </div>
           </div>

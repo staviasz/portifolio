@@ -59,7 +59,7 @@ export default async function Post({ params }: IParams) {
         <ChangePage changePage="next" link={next.link}>
           {next.name}
         </ChangePage>
-        <div className="lg:max-w-3xl sm:max-w-xl max-w-[355px] mx-auto divRenderHtml">
+        <div className="lg:max-w-3xl sm:max-w-xl max-w-full px-3 mx-auto divRenderHtml">
           <RenderHtml html={html} />
         </div>
       </main>

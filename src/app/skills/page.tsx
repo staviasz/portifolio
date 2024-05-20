@@ -14,7 +14,7 @@ export default async function Skills() {
   return (
     <>
       {techs && (
-        <main className="w-full min-h-screen bg-blueDark py-20 relative">
+        <main className="w-full min-h-screen bg-blueDark py-20 relative px-3">
           <OpacyTop />
           <ChangePage changePage="prev" link="/posts">
             Posts
@@ -22,7 +22,7 @@ export default async function Skills() {
           <ChangePage changePage="next" link="/contact">
             Contato
           </ChangePage>
-          <div className="lg:max-w-4xl sm:max-w-xl max-w-[355px]  mx-auto bg-black rounded min-h-[400px]">
+          <div className="lg:max-w-4xl sm:max-w-xl max-w-full mx-auto bg-black rounded min-h-[400px]">
             <h1 className="text-center sm:text-4xl text-2xl font-bold py-5">
               Skills
             </h1>
