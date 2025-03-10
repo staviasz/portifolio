@@ -27,6 +27,7 @@ export default async function Posts() {
     <>
       {listItemPosts && (
         <ContainerMain
+          title="Posts"
           list={listItemPosts.reverse()}
           route="/posts"
           namePathPrev="Projects"

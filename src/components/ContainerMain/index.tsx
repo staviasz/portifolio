@@ -4,6 +4,7 @@ import OpacyTop from "../OpacyTop";
 import ProjectList from "../ProjectsList";
 
 export interface IContainerMain {
+  title: string;
   description: string;
   list: Array<IlistItem>;
   route: string;
@@ -14,6 +15,7 @@ export interface IContainerMain {
 }
 
 export default function ContainerMain({
+  title,
   list,
   route,
   pathPrev,
@@ -33,9 +35,7 @@ export default function ContainerMain({
           {namePathNext}
         </ChangePage>
         <div className="lg:max-w-5xl sm:max-w-xl max-w-full mx-auto px-3">
-          <h1 className="sm:text-4xl text-2xl font-bold mb-5">
-            Developer portifolio
-          </h1>
+          <h1 className="sm:text-4xl text-2xl font-bold mb-5">{title}</h1>
           <p className="mb-10">{description}</p>
           <ProjectList list={list} route={route} />
         </div>
